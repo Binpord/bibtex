@@ -144,4 +144,17 @@
   comment   = {Xavier (by the name of the author) initialization. Glorot shows theoretical background behind this formulas yet it seems to be important only for tanh-like saturating activations. Also Xavier shows that softsign activation is almost indeferent to his initialization.},
 }
 
+@Article{Tang2019,
+  author      = {Yichuan Charlie Tang and Ruslan Salakhutdinov},
+  title       = {Multiple {F}utures {P}rediction},
+  abstract    = {Temporal prediction is critical for making intelligent and robust decisions in complex dynamic environments. Motion prediction needs to model the inherently uncertain future which often contains multiple potential outcomes, due to multi-agent interactions and the latent goals of others. Towards these goals, we introduce a probabilistic framework that efficiently learns latent variables to jointly model the multi-step future motions of agents in a scene. Our framework is data-driven and learns semantically meaningful latent variables to represent the multimodal future, without requiring explicit labels. Using a dynamic attention-based state encoder, we learn to encode the past as well as the future interactions among agents, efficiently scaling to any number of agents. Finally, our model can be used for planning via computing a conditional probability density over the trajectories of other agents given a hypothetical rollout of the 'self' agent. We demonstrate our algorithms by predicting vehicle trajectories of both simulated and real data, demonstrating the state-of-the-art results on several vehicle trajectory datasets.},
+  comment     = {Agents interractoin prediction framework. Allows to predict possible agents reactions to ego vehicle hallucinated trajectory. Consists of Trajectory-encoding RNN and Context-encoding CNN, Dynamic Attention Encoder and Decoding RNN. Encoding and decoding RNNs share weights among agents, hence can be computated using minibatch techniques. Achieves 1.399 meters minADE (min by FDE) error on Argoverse-forecasting dataset.},
+  date        = {2019-11-04},
+  eprint      = {http://arxiv.org/abs/1911.00997v1},
+  eprintclass = {cs.LG},
+  eprinttype  = {arXiv},
+  file        = {:http\://arxiv.org/pdf/1911.00997v1:PDF},
+  keywords    = {cs.LG, cs.CV, cs.MA, cs.RO, stat.ML},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
